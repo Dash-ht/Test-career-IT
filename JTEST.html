@@ -1,0 +1,393 @@
+
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>IT Career Test</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #3fb950;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        form {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+        .question {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 12px rgba(0,255,128,0.1);
+        }
+        .question p {
+            color: #3fb950;
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        label {
+            display: block;
+            margin: 6px 0;
+            font-size: 16px;
+            cursor: pointer;
+            color: #c9d1d9;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button[type="submit"] {
+            display: block;
+            margin: 40px auto 20px auto;
+            padding: 12px 28px;
+            font-size: 18px;
+            background-color: #238636;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #2ea043;
+        }
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #161b22;
+            border: 1px solid #238636;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(63, 185, 80, 0.4);
+        }
+        .results h2 {
+            color: #3fb950;
+        }
+        .results p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>IT Career Test</h1>
+    <form id="careerForm">
+        <!-- 30 questions inserted below -->
+        <div class="question">
+            <p>1. Что приносит тебе больше удовольствия?</p>
+            <label><input type="radio" name="q1" value="Backend,Cybersecurity,DevOps"> Решать логические задачи</label><br>
+            <label><input type="radio" name="q1" value="Frontend,UI/UX"> Работать с визуалом</label><br>
+            <label><input type="radio" name="q1" value="Data Science,AI/ML"> Искать закономерности в данных</label><br>
+            <label><input type="radio" name="q1" value="Product Management"> Организовывать процессы</label><br>
+            <label><input type="radio" name="q1" value="GameDev"> Играть или создавать игры</label>
+        </div>
+
+        <div class="question">
+            <p>2. Насколько тебе близка математика?</p>
+            <label><input type="radio" name="q2" value="Data Science,AI/ML"> Люблю, особенно анализ и статистику</label><br>
+            <label><input type="radio" name="q2" value="Backend,Cybersecurity"> Нравится в меру</label><br>
+            <label><input type="radio" name="q2" value="Product Management"> Терпимо</label><br>
+            <label><input type="radio" name="q2" value="UI/UX"> Не люблю</label>
+        </div>
+
+        <div class="question">
+            <p>3. Как ты предпочитаешь работать?</p>
+            <label><input type="radio" name="q3" value="Backend,AI/ML"> Самостоятельно</label><br>
+            <label><input type="radio" name="q3" value="Frontend,QA,Product Management"> В команде</label><br>
+            <label><input type="radio" name="q3" value="DevOps,GameDev"> В смешанном формате</label>
+        </div>
+
+        <div class="question">
+            <p>4. Какие из ниже перечисленных ты любишь?</p>
+            <label><input type="radio" name="q4" value="UI/UX,Product Management"> Придумывать концепции</label><br>
+            <label><input type="radio" name="q4" value="Backend,Frontend,GameDev"> Писать код</label><br>
+            <label><input type="radio" name="q4" value="Product Management"> Делать презентации</label><br>
+            <label><input type="radio" name="q4" value="AI/ML,Data Science"> Исследовать тему</label><br>
+            <label><input type="radio" name="q4" value="UI/UX"> Писать тексты или статьи</label>
+        </div>
+
+        <div class="question">
+            <p>5. Какие школьные/университетские предметы тебе были ближе?</p>
+            <label><input type="radio" name="q5" value="Backend,AI/ML"> Математика/информатика</label><br>
+            <label><input type="radio" name="q5" value="UI/UX"> Искусство/дизайн</label><br>
+            <label><input type="radio" name="q5" value="Product Management"> История/общество</label><br>
+            <label><input type="radio" name="q5" value="Cybersecurity,GameDev"> Физика/химия</label><br>
+            <label><input type="radio" name="q5" value="QA"> Языки</label>
+        </div>
+
+        <!-- Questions 6 to 30 -->
+        <div class="question">
+            <p>6. Что тебе ближе?</p>
+            <label><input type="radio" name="q6" value="GameDev,Frontend"> Создание чего-то нового</label><br>
+            <label><input type="radio" name="q6" value="QA"> Устранение ошибок</label><br>
+            <label><input type="radio" name="q6" value="Data Science"> Анализ и выводы</label><br>
+            <label><input type="radio" name="q6" value="Product Management"> Планирование</label><br>
+            <label><input type="radio" name="q6" value="GameDev"> Анимация и звук</label>
+        </div>
+        <div class="question">
+            <p>7. С какими программами ты сталкивался и тебе нравится их вид/структура?</p>
+            <label><input type="radio" name="q7" value="UI/UX"> Figma или Photoshop</label><br>
+            <label><input type="radio" name="q7" value="Backend,AI/ML"> Python, C++, Java</label><br>
+            <label><input type="radio" name="q7" value="Data Science"> Excel, Tableau</label><br>
+            <label><input type="radio" name="q7" value="GameDev"> Unity, Unreal Engine</label><br>
+            <label><input type="radio" name="q7" value="QA"> Почти не сталкивался, но познакомился с девушкой из Америки, которая работает в сфере айти</label>
+        </div>
+        <div class="question">
+            <p>8. Сколько времени ты готов учиться новой технологии?</p>
+            <label><input type="radio" name="q8" value="AI/ML,Cybersecurity"> Пока не пойму до конца</label><br>
+            <label><input type="radio" name="q8" value="Frontend"> 1–2 недели — и хватит</label><br>
+            <label><input type="radio" name="q8" value="Product Management"> Только если нужно под задачу</label><br>
+            <label><input type="radio" name="q8" value="DevOps,Backend"> Готов учиться постоянно</label>
+        </div>
+        <div class="question">
+            <p>9. Что тебе легче всего даётся? (можешь выбрать по предложениям в скобках, если затрудняешься)</p>
+            <label><input type="radio" name="q9" value="Data Science"> Найти информацию (найти где можно купить желаемое тобой белье)</label><br>
+            <label><input type="radio" name="q9" value="Product Management"> Объяснить идею (объяснить мне свою новую идею что будем делать когда белье будет на мне)</label><br>
+            <label><input type="radio" name="q9" value="DevOps"> Спланировать шаги (спланировать что мы будем делать когда белье будет на мне)</label><br>
+            <label><input type="radio" name="q9" value="UI/UX"> Подобрать визуал (подобрать мне белье)</label><br>
+            <label><input type="radio" name="q9" value="QA"> Найти ошибку (найти деталь, которая тебе не нравится в моем нынешнем белье)</label>
+        </div>
+        <div class="question">
+            <p>10. У тебя есть блог или канал, который ты развивал?</p>
+            <label><input type="radio" name="q10" value="Product Management"> Да</label><br>
+            <label><input type="radio" name="q10" value="AI/ML"> Нет</label>
+        </div>
+        <!-- Questions 11 to 30 -->
+        <div class="question">
+            <p>11. Тебе нужно написать инструкцию для пользователя. Как ты к этому отнесешься?</p>
+            <label><input type="radio" name="q11" value="Product Management,UI/UX"> С интересом</label><br>
+            <label><input type="radio" name="q11" value="Backend"> Могу, но не люблю</label><br>
+            <label><input type="radio" name="q11" value="GameDev"> Буду избегать</label>
+        </div>
+        <div class="question">
+            <p>12. Ты берешься за задачу. Как поступаешь? (задача: заманить меня в Москву)</p>
+            <label><input type="radio" name="q12" value="Frontend,GameDev"> Сначала делаю MVP (думаешь насколько это хорошая идея нас обоих, думаешь насколько мне ценно пребывание в Москве)</label><br>
+            <label><input type="radio" name="q12" value="Backend,DevOps"> Думаю о структуре и архитектуре (думаешь о том, как будем выстраивать жизни совместную и способ заманивания)</label><br>
+            <label><input type="radio" name="q12" value="GameDev"> Начинаю сразу писать (мне пишешь и кидаешь красивые фотографии Москвы, ищешь способы заманить здесь и сейчас)</label><br>
+            <label><input type="radio" name="q12" value="Product Management"> Делаю презентацию идеи (описваешь почему твоя идея и желание выигрышное)</label>
+        </div>
+        <div class="question">
+            <p>13. Что из этого тебе ближе?</p>
+            <label><input type="radio" name="q13" value="Backend"> Чистый код</label><br>
+            <label><input type="radio" name="q13" value="UI/UX"> Визуал и отклик пользователя</label><br>
+            <label><input type="radio" name="q13" value="DevOps"> Стабильность системы</label><br>
+            <label><input type="radio" name="q13" value="QA"> Отладка</label><br>
+            <label><input type="radio" name="q13" value="Product Management"> Придумывание фич</label>
+        </div>
+        <div class="question">
+            <p>14. Что ты чувствуешь, когда находишь баг?</p>
+            <label><input type="radio" name="q14" value="QA"> Радость — сейчас разберусь</label><br>
+            <label><input type="radio" name="q14" value="GameDev"> Злость</label><br>
+            <label><input type="radio" name="q14" value="UI/UX"> Усталость</label><br>
+            <label><input type="radio" name="q14" value="Data Science"> Интерес — хочется узнать, откуда</label>
+        </div>
+        <div class="question">
+            <p>15. Как ты реагируешь на критику?</p>
+            <label><input type="radio" name="q15" value="Product Management"> Использую как рост</label><br>
+            <label><input type="radio" name="q15" value="Backend"> Защищаюсь</label><br>
+            <label><input type="radio" name="q15" value="GameDev"> Пропускаю мимо</label>
+        </div>
+        <!-- Questions 16 to 30 -->
+        <div class="question">
+            <p>16. Что для тебя важнее?</p>
+            <label><input type="radio" name="q16" value="UI/UX"> Красивый результат</label><br>
+            <label><input type="radio" name="q16" value="Frontend"> Быстрое решение</label><br>
+            <label><input type="radio" name="q16" value="AI/ML"> Глубокое понимание</label><br>
+            <label><input type="radio" name="q16" value="DevOps"> Структура</label>
+        </div>
+        <div class="question">
+            <p>17. В команде ты бы взял на себя:</p>
+            <label><input type="radio" name="q17" value="UI/UX"> UI/UX дизайн</label><br>
+            <label><input type="radio" name="q17" value="Backend"> Архитектура(задняя часть программы)</label><br>
+            <label><input type="radio" name="q17" value="Data Science"> Аналитику</label><br>
+            <label><input type="radio" name="q17" value="DevOps"> Настройку систем</label><br>
+            <label><input type="radio" name="q17" value="QA"> Тестирование</label>
+        </div>
+        <div class="question">
+            <p>18. Ты больше:</p>
+            <label><input type="radio" name="q18" value="AI/ML"> Интроверт</label><br>
+            <label><input type="radio" name="q18" value="QA"> Скорее интроверт</label><br>
+            <label><input type="radio" name="q18" value="Product Management"> Скорее экстраверт</label><br>
+            <label><input type="radio" name="q18" value="UI/UX"> Явно экстраверт</label>
+        </div>
+        <div class="question">
+            <p>19. Сколько времени можешь концентрироваться? (тут могла бы быть шутка)</p>
+            <label><input type="radio" name="q19" value="QA"> До 30 минут</label><br>
+            <label><input type="radio" name="q19" value="Frontend"> 1–2 часа</label><br>
+            <label><input type="radio" name="q19" value="AI/ML"> Больше 3 часов</label>
+        </div>
+        <div class="question">
+            <p>20. Умеешь ли объяснить сложную идею простыми словами?</p>
+            <label><input type="radio" name="q20" value="Product Management"> Да, легко</label><br>
+            <label><input type="radio" name="q20" value="Data Science"> Только если хорошо знаю</label><br>
+            <label><input type="radio" name="q20" value="Backend"> Сложно</label>
+        </div>
+        <div class="question">
+            <p>21. Как ты ведёшь задачи?</p>
+            <label><input type="radio" name="q21" value="DevOps"> В трекерах/приложениях</label><br>
+            <label><input type="radio" name="q21" value="QA"> В блокноте</label><br>
+            <label><input type="radio" name="q21" value="GameDev"> Не веду</label>
+        </div>
+        <div class="question">
+            <p>22. Сайт не работает. Что сделаешь первым? (ситуация: я расстроена)</p>
+            <label><input type="radio" name="q22" value="DevOps"> Проверю сервер/хостинг</label><br>
+            <label><input type="radio" name="q22" value="Backend"> Посмотрю код</label><br>
+            <label><input type="radio" name="q22" value="UI/UX"> Проверю интерфейс</label><br>
+            <label><input type="radio" name="q22" value="QA"> Поищу ошибку</label><br>
+            <label><input type="radio" name="q22" value="Data Science"> Изучу сообщения об ошибке</label>
+        </div>
+        <div class="question">
+            <p>23. Приложение тормозит. Что думаешь?</p>
+            <label><input type="radio" name="q23" value="Backend"> Много кода</label><br>
+            <label><input type="radio" name="q23" value="UI/UX"> Анимации и визуал</label><br>
+            <label><input type="radio" name="q23" value="DevOps"> Сервер или база</label><br>
+            <label><input type="radio" name="q23" value="QA"> Комп слабый</label><br>
+            <label><input type="radio" name="q23" value="GameDev"> Всё переделать</label>
+        </div>
+        <div class="question">
+            <p>24. В команде из 10 ты бы занял:</p>
+            <label><input type="radio" name="q24" value="QA"> Тестировщик</label><br>
+            <label><input type="radio" name="q24" value="UI/UX"> Дизайнер</label><br>
+            <label><input type="radio" name="q24" value="Backend"> Разработчик</label><br>
+            <label><input type="radio" name="q24" value="Data Science"> Аналитик</label><br>
+            <label><input type="radio" name="q24" value="Product Management"> Координатор</label>
+        </div>
+        <div class="question">
+            <p>25. Нужно сделать Telegram-бота. Что интереснее?</p>
+            <label><input type="radio" name="q25" value="Backend"> Настроить команды</label><br>
+            <label><input type="radio" name="q25" value="Data Science"> Анализ данных</label><br>
+            <label><input type="radio" name="q25" value="UI/UX"> Визуал и тексты</label><br>
+            <label><input type="radio" name="q25" value="DevOps"> Проверка стабильности</label><br>
+            <label><input type="radio" name="q25" value="Product Management"> Весь процесс</label>
+        </div>
+        <div class="question">
+            <p>26. В командном чате ты чаще:</p>
+            <label><input type="radio" name="q26" value="Data Science"> Спрашиваешь «почему?»</label><br>
+            <label><input type="radio" name="q26" value="QA"> Помогаешь</label><br>
+            <label><input type="radio" name="q26" value="GameDev"> Шутишь</label><br>
+            <label><input type="radio" name="q26" value="Backend"> Просто читаешь</label><br>
+            <label><input type="radio" name="q26" value="Product Management"> Координируешь</label>
+        </div>
+        <div class="question">
+            <p>27. Что тебя вдохновляет?</p>
+            <label><input type="radio" name="q27" value="AI/ML"> Искусственный интеллект</label><br>
+            <label><input type="radio" name="q27" value="Cybersecurity"> Кибербезопасность</label><br>
+            <label><input type="radio" name="q27" value="GameDev"> Игры</label><br>
+            <label><input type="radio" name="q27" value="Data Science"> Наука</label><br>
+            <label><input type="radio" name="q27" value="Product Management"> Предпринимательство</label>
+        </div>
+        <div class="question">
+            <p>28. Какая цель тебе ближе?</p>
+            <label><input type="radio" name="q28" value="AI/ML"> Работа в топ-компании</label><br>
+            <label><input type="radio" name="q28" value="Product Management"> Стартап</label><br>
+            <label><input type="radio" name="q28" value="Data Science"> Полезный проект</label><br>
+            <label><input type="radio" name="q28" value="Frontend"> Удалённый доход</label><br>
+            <label><input type="radio" name="q28" value="DevOps"> Работа с профессионалами</label>
+        </div>
+        <div class="question">
+            <p>29. Хочешь ли ты публичности?</p>
+            <label><input type="radio" name="q29" value="Product Management"> Да, блог, каналы</label><br>
+            <label><input type="radio" name="q29" value="Frontend"> Иногда</label><br>
+            <label><input type="radio" name="q29" value="AI/ML"> Нет</label>
+        </div>
+        <div class="question">
+            <p>30. Сколько часов в неделю готов развиваться?</p>
+            <label><input type="radio" name="q30" value="QA"> До 5</label><br>
+            <label><input type="radio" name="q30" value="Frontend"> 5–10</label><br>
+            <label><input type="radio" name="q30" value="Data Science"> 10–20</label><br>
+            <label><input type="radio" name="q30" value="AI/ML"> 20+</label>
+        </div>
+
+        <button type="submit">Узнать результат</button>
+    </form>
+
+    <div class="results hidden" id="results"></div>
+
+    <script>
+        document.getElementById('careerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const scores = {};
+
+            for (const [key, value] of formData.entries()) {
+                const fields = value.split(',');
+                fields.forEach(field => {
+                    if (!scores[field]) scores[field] = 0;
+                    scores[field]++;
+                });
+            }
+
+            const total = Object.values(scores).reduce((a, b) => a + b, 0);
+            let resultText = '<h2>Результаты:</h2>';
+
+            Object.entries(scores)
+                .sort((a, b) => b[1] - a[1])
+                .forEach(([career, count]) => {
+                    const percent = ((count / total) * 100).toFixed(1);
+                    resultText += `<p>${career}: ${percent}%</p>`;
+                });
+                resultText += `<p><strong>Тот, кого хочется обнять:</strong> 100%</p>`;
+
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = resultText;
+            resultsDiv.classList.remove('hidden');
+        });
+    </script>
+    <canvas id="sparkCanvas" style="position:fixed;top:0;left:0;pointer-events:none;z-index:999;width:100vw;height:100vh;"></canvas>
+<script>
+const canvas = document.getElementById('sparkCanvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let sparks = [];
+function createSparks() {
+    for (let i = 0; i < 80; i++) {
+        sparks.push({
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+            vx: (Math.random() - 0.5) * 8,
+            vy: (Math.random() - 0.5) * 8,
+            life: 100 + Math.random() * 50,
+            radius: 1 + Math.random() * 2
+        });
+    }
+}
+function updateSparks() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = sparks.length - 1; i >= 0; i--) {
+        const s = sparks[i];
+        s.x += s.vx;
+        s.y += s.vy;
+        s.life--;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = `rgba(255, 255, 153, ${s.life / 150})`;
+        ctx.fill();
+        if (s.life <= 0) sparks.splice(i, 1);
+    }
+    requestAnimationFrame(updateSparks);
+}
+document.getElementById('careerForm').addEventListener('submit', () => {
+    createSparks();
+});
+updateSparks();
+</script>
+</body>
+</html>
